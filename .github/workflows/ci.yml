@@ -27,7 +27,9 @@ jobs:
           pip install -r backend/requirements.txt
 
       - name: Build backend Docker image
-        run: docker build -t devops-task-manager-backend ./backend
+        working-directory: backend
+        run: docker build -t devops-task-manager-backend .
 
       - name: Build frontend Docker image
-        run: docker build -t devops-task-manager-frontend ./frontend
+        working-directory: frontend
+        run: docker build -t devops-task-manager-frontend .

@@ -24,7 +24,7 @@ services:
 
   frontend:
     build:
-      context: ./frontend
+      context: ./frontend/frontend
     container_name: devops-frontend
     ports:
       - "8080:80"
