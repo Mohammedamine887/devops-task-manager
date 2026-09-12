@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f7fb;
+  color: #1f2937;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  width: 90%;
+  max-width: 750px;
+  margin: 60px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 32px;
+}
+
+/* Add task form */
+
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.task-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.task-form input:focus {
+  border-color: #2563eb;
+}
+
+.task-form button {
+  padding: 13px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.task-form button:hover {
+  background: #1d4ed8;
+}
+
+/* Tasks */
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fafafa;
+  transition: 0.2s ease;
+}
+
+.task:hover {
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+}
+
+.task input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.task span {
+  flex: 1;
+  font-size: 16px;
+  word-break: break-word;
+}
+
+/* Task buttons */
+
+.task button {
+  padding: 8px 13px;
+  border: none;
+  border-radius: 7px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.task button:first-of-type {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+.task button:first-of-type:hover {
+  background: #d1d5db;
+}
+
+.task button:last-of-type {
+  background: #ef4444;
+  color: white;
+}
+
+.task button:last-of-type:hover {
+  background: #dc2626;
+}
+
+/* Edit mode input */
+
+.task input[type="text"] {
+  flex: 1;
+  min-width: 0;
+  padding: 9px 11px;
+  border: 1px solid #2563eb;
+  border-radius: 7px;
+  font-size: 15px;
+  outline: none;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .app {
+    width: 94%;
+    margin: 25px auto;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .task-form {
+    flex-direction: column;
+  }
+
+  .task-form button {
+    width: 100%;
+  }
+
+  .task {
+    flex-wrap: wrap;
+  }
+
+  .task span {
+    min-width: 150px;
+  }
+
+  .task button {
+    padding: 8px 11px;
+  }
+}
